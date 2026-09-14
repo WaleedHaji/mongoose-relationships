@@ -1,11 +1,12 @@
 const mongoose = require('mongoose')
-const { applyTimestamps } = require('../../../../Lectures/mongoose-relationships/models/Authors')
 
-const userSchema = new mongoose.schema({
+
+const userSchema = new mongoose.Schema({
     username: {
         type: String,
         unique: true,
         required: true,
+        trim: true,
         minLength: 6,
         maxLength: 16,
     },

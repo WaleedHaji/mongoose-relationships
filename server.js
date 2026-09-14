@@ -3,7 +3,9 @@ const express = require("express") //importing express package
 const app = express() // creates a express application
 const dotenv = require("dotenv").config() //this allows me to use my .env values in this file
 const mongoose = require("mongoose")
-
+const User = require('./models/User')
+const Listing = require('./models/Listing')
+const Review = require('./models/Review')
 
 
 const dns = require("dns")
